@@ -46,7 +46,7 @@ EOL
 }
 EOL
       policy_attachments = [
-        "AliyunCSManagedCsiRolePolicy"
+        "AliyunCSManagedLogRolePolicy"
       ],
       additional_policy = null
     },
