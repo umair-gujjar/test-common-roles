@@ -176,7 +176,7 @@ EOL
       additional_policy = null
     },
     {
-      role_name            = "AliyunCSManagedVKRole"
+      role_name            = "AliyunCSKubernetesAuditRole"
       description          = "Kubernetes role for ACK"
       max_session_duration = 3600
       role_document        = <<EOL
@@ -196,7 +196,7 @@ EOL
 }
 EOL
       policy_attachments = [
-        "AliyunCSManagedCmsRolePolicy"
+        "AliyunCSKubernetesAuditRolePolicy"
       ],
       additional_policy = null
     },
