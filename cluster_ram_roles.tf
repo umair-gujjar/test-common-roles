@@ -126,6 +126,31 @@ EOL
       additional_policy = null
     },
     {
+      role_name            = "AliyunCSClusterRole"
+      description          = "Kubernetes role for ACK"
+      max_session_duration = 3600
+      role_document        = <<EOL
+{
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": [
+          "cs.aliyuncs.com"
+        ]
+      }
+    }
+  ],
+  "Version": "1"
+}
+EOL
+      policy_attachments = [
+        "AliyunCSClusterRolePolicy"
+      ],
+      additional_policy = null
+    },
+    {
       role_name            = "AliyunESSRole"
       description          = "Used for auto-scaling"
       max_session_duration = 3600
